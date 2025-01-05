@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+
+
+body {
+    background-color: #17171b;
+    overflow-y: auto;
+    
+}
+
+/* Header */
+.header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    width: 100%; /* Full width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar .title {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    padding: auto;
+    margin-top: 10px;
+}
+
+.navlist {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navlist li a {
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.navlist li a:hover {
+    color: #f64137;
+}
+
+/* Footer */
+.footer {
+    display:flex;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    width: 100%;
+    padding-top: 40px;
+    justify-content: center;
+}
+
+.webpage{
+    width:100%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    
+    overflow-x: hidden;
+    
+    position: relative;
+    
+
+}
+
+.main1{
+    width:100%;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family:"Bebas Neue";
+}
+
+.hero-section {
+    position: relative;
+    min-height: 80vh;
+    background: url('webb-tarantula-neb.webp') no-repeat center center/cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding-left: 100px;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.view-button {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    background-color: #f64137;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+    font-family: "Bebas Neue";
+}
+
+.view-button:hover {
+    background-color: #fff;
+    color: #f64137;
+}
+
+.view-button span {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.main2{
+    
+    
+    width:100%;
+    
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+    justify-content: space-evenly;
+    
+    position: relative;
+    
+}
+
+
+.animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hds-video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Send the video behind the content */
+    transform: translate(-50%, -50%); /* Center the video */
+}
+
+#content {
+    position: relative;
+    z-index: 1; /* Bring content above the video */
+    color: white; /* Text color */
+    text-align:start; /* Center text */
+    padding: 20px; /* Add some padding */
+    margin-top:300px;
+}
+
+h1 {
+    font-size: 6rem; /* Large font size for the main title */
+    
+}
+
+h2 {
+    font-size: 2rem; /* Medium font size for the quote */
+    margin-bottom: 10px; /* Space below the quote */
+    margin-top: 100px;
+}
+
+p {
+    font-size: 1.5rem; /* Smaller font size for the author */
+    justify-self: end;
+}
+
+
+
+
+
+
+/* .card-content{
+    background-color: antiquewhite;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 500px;
+    height: 488.75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+   
+    
+   
+    
+} */
+
+.card1{
+   
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 450px;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    
+   
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make overlay span the full width of the parent */
+    height: 100%; /* Make overlay span the full height of the parent */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+   /* Inherit rounded corners from the parent if any */
+    box-sizing: border-box; /* Include padding and border in the size calculations */
+}
+
+
+.card1:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.card1:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.overlay p {
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Bebas Neue", sans-serif; /* Match your font */
+    text-align: center;
+}
+
+
+
+.card1 img{
+    width: 100%; /* Make overlay span the full width of the parent */
+    height: 100%;
+    object-fit: fill;
+    
+
+}
+.main {
+    flex: 1; /* Make this section take up the remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#name{
+    display: flex;
+    justify-self: end;
+    align-self: flex-end;
+    padding-right: 25px;
+
+}
+#card-content1 img{
+    width: 10%;
+    height: 10%;
+}
+.card-link {
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block;
+}
+
+
+

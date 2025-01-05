@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    background-color: black;
+    font-family: Poppins;
+    color: white;
+}
+
+:root {
+    --item1-transform: translateX(-100%) translateY(-5%) scale(1.5);
+    --item1-filter: blur(30px);
+    --item1-zIndex: 11;
+    --item1-opacity: 0;
+
+    --item2-transform: translateX(0);
+    --item2-filter: blur(0px);
+    --item2-zIndex: 10;
+    --item2-opacity: 1;
+
+    --item3-transform: translate(50%, 10%) scale(0.8);
+    --item3-filter: blur(10px);
+    --item3-zIndex: 9;
+    --item3-opacity: 1;
+
+    --item4-transform: translate(90%, 20%) scale(0.5);
+    --item4-filter: blur(30px);
+    --item4-zIndex: 8;
+    --item4-opacity: 1;
+
+    --item5-transform: translate(120%, 30%) scale(0.3);
+    --item5-filter: blur(40px);
+    --item5-zIndex: 7;
+    --item5-opacity: 0;
+}
+
+/* header {
+    width: 1140px;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 50px;
+    align-items: center;
+}
+
+header .logo {
+    font-weight: bold;
+}
+
+header nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+} */
+
+/* carousel */
+.carousel {
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+    margin-top: -50px;
+}
+
+.carousel .list {
+    position: absolute;
+    width: 1140px;
+    max-width: 90%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.5s ease; /* Smooth transition for the list */
+}
+
+.carousel .list .item {
+    position: absolute;
+    left: 0%;
+    width: 70%;
+    height: 100%;
+    font-size: 15px;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+}
+
+.carousel .list .item:nth-child(n + 6) {
+    opacity: 0;
+}
+
+.carousel .list .item:nth-child(2) {
+    z-index: 10;
+    transform: translateX(0);
+}
+
+.carousel .list .item img {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 1.5s;
+}
+
+.carousel .list .item .introduce {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.carousel .list .item:nth-child(2) .introduce {
+    opacity: 1;
+    pointer-events: auto;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.5s;
+    scale: 1;
+}
+
+.carousel .list .item .introduce .title {
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1em;
+    color: white;
+}
+
+.carousel .list .item .introduce .topic {
+    padding-top:30px;
+    font-size: 4em;
+    font-weight: 500;
+    color: white;
+    line-height:1em;
+}
+
+.carousel .list .item .introduce .des {
+    padding-top:30px;
+    font-size: small;
+    color: white;
+}
+
+.carousel .list .item:nth-child(1) {
+    transform: var(--item1-transform);
+    filter: var(--item1-filter);
+    z-index: var(--item1-zIndex);
+    opacity: var(--item1-opacity);
+    pointer-events: none;
+}
+
+.carousel .list .item:nth-child(3) {
+    transform: var(--item3-transform);
+    filter: var(--item3-filter);
+    z-index: var(--item3-zIndex);
+    opacity: var(--item3-opacity);
+    pointer-events: auto;
+}
+
+.carousel .list .item:nth-child(4) {
+    transform: var(--item4-transform);
+    filter: var(--item4-filter);
+    z-index: var(--item4-zIndex);
+    opacity: var(--item4-opacity);
+    pointer-events: none;
+}
+
+.carousel .list .item:nth-child(5) {
+    transform: var(--item5-transform);
+    filter: var(--item5-filter);
+    z-index: var(--item5-zIndex);
+    opacity: var(--item5-opacity);
+    pointer-events: none;
+}
+
+.arrows {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    gap: 200px;
+}
+
+.arrows button {
+    width: 70px;
+    height: 70px;
+    background-color: 	#f64137;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: white;
+    font-style:italic;
+    /* box-shadow: rgba(255, 255, 255, 0.333) 0px 1px 38px, rgba(255, 255, 255, 0.05) 0px 1px 12px; */
+
+    
+    
+}
+
+.arrows button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
